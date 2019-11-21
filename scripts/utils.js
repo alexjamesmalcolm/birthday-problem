@@ -31,19 +31,16 @@ const countUniqueInstances = array => {
   return count;
 };
 
-const doesSomeoneHaveAMatchingBirthday = people => {
-  let result = false;
-  people.forEach((a, i) =>
-    people.forEach((b, j) => {
+const doesSomeoneHaveAMatchingBirthday = people =>
+  people.some((a, i) =>
+    people.some((b, j) => {
       if (i !== j) {
         if (a - b === 0) {
-          result = true;
+          return true;
         }
       }
     })
   );
-  return result;
-};
 
 const testARoom = (numberOfPeople, numberOfTries) => {
   const results = [];
@@ -54,4 +51,12 @@ const testARoom = (numberOfPeople, numberOfTries) => {
   return results.filter(result => result === match).length / results.length;
 };
 
-export { testARoom, countUniqueInstances };
+const generateRange = (a, b) => {
+  const range = [];
+  for (let n = a; n <= b; n++) {
+    range.push(n);
+  }
+  return range;
+};
+
+export { testARoom, countUniqueInstances, generateRange };
