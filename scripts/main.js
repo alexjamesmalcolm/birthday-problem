@@ -23,7 +23,7 @@ const generateChartData = () => {
       {
         label: "Simulated",
         data: rangeOfPeople.map(
-          numberOfPeople => testARoom(numberOfPeople, 100) * 100
+          numberOfPeople => testARoom(numberOfPeople, 75) * 100
         ),
         backgroundColor: "rgba(254, 163, 170, 0.3)",
         borderColor: "rgba(254, 163, 170, 1)"
