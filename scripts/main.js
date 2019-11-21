@@ -57,6 +57,6 @@ const handleNumberOfPeopleChange = number => {
   numberOfPeople.textContent = number;
 };
 
-peopleSlider.addEventListener("change", () =>
-  handleNumberOfPeopleChange(peopleSlider.value)
-);
+// peopleSlider.addEventListener("change", () =>
+//   handleNumberOfPeopleChange(peopleSlider.value)
+// );

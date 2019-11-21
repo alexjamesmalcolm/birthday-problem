@@ -86,18 +86,48 @@ button {
   grid-column: 2/4;
 }
 
-.pretty-graph-explanation {
-  grid-column: 2;
-  grid-row: 3;
+.right-middle {
   width: 15.7rem;
+  grid-column: 3;
+}
+
+.left-middle {
+  width: 19rem;
+  grid-column: 2;
+}
+
+.pretty-graph-explanation {
+  grid-row: 3;
 }
 
 .full-spread {
-  grid-column: 3;
+  grid-row: 4;
+}
+
+.why-it-works {
   grid-row: 3/5;
-  width: 20rem;
+  height: max-content;
 }
 
 sup {
   font-size: 0.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+svg {
+  stroke: white;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+footer {
+  grid-row: 5;
+  grid-column: 1/5;
+  display: flex;
+  justify-content: center;
 }

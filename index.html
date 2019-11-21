@@ -65,17 +65,17 @@
           Seems a little hard to believe? <em class="secondary">Same here!</em>
         </p>
       </div>
-      <section class="one-off">
+      <!-- <section class="one-off">
         <p>Try it out!</p>
         <input type="range" id="people" min="1" max="100" value="1" step="1" />
         <label for="cowbell">People (<span id="numberOfPeople">1</span>)</label>
         <button>Run!</button>
-      </section>
-      <section class="box full-spread">
-        <p>
-          Percent of people with the same birthday
-          <sup>Cool graphs Here v v v</sup>
-        </p>
+      </section> -->
+      <section class="box full-spread left-middle">
+        <h2>
+          Percent with the same birthday
+          <sup>Cool graphs Here v</sup>
+        </h2>
         <canvas
           id="graph"
           width="400"
@@ -86,8 +86,8 @@
           Oh shit! Update your computer!
         </canvas>
       </section>
-      <section class="box pretty-graph-explanation">
-        <p>To figure out the truth I used math!</p>
+      <section class="box pretty-graph-explanation left-middle">
+        <h2>To solve the puzzle we'll use math!</h2>
         <p>On the right there are two lines.</p>
         <p>
           The <em class="primary">Exact</em> line was calculated using an
@@ -102,6 +102,45 @@
           and over.
         </p>
       </section>
+      <section class="box why-it-works right-middle">
+        <h2>How can this make sense?</h2>
+        <p>
+          So if there's two people in the room the chance should be 1 in 365,
+          right?
+        </p>
+        <p>
+          Yes, every birthday comparison has a chance of 1 in 365 of finding the
+          same birthday.
+        </p>
+        <p>So how many for three people?</p>
+        <p>
+          We just have to count the number of comparisons we'd have to make. Two
+          people meant one comparison but three people means three comparisons.
+        </p>
+        <p>
+          We can know this by visualizing the connections.
+        </p>
+        <object
+          data="./images/Simple_triangle.svg"
+          type="image/svg+xml"
+        ></object>
+        <p>
+          With three people, or three points, we can count the three lines of
+          comparisons.
+        </p>
+        <p>
+          Now if you're paying attention these are the classic
+          <a href="https://oeis.org/A000217">Triangle Numbers!</a>
+        </p>
+        <p>
+          The equation for the Triangle Numbers is
+          <span class="monospace">n(n+1)/2</span> which is how we get the
+          <em class="primary">Exact</em> line.
+        </p>
+      </section>
+      <footer>
+        <small>Made by Alex Malcolm</small>
+      </footer>
     </div>
     <script type="module" src="./scripts/main.js"></script>
   </body>
