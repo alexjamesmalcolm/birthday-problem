@@ -2,17 +2,89 @@
 <html lang="en">
   <head>
     <title>Birthday Room Simulator</title>
-
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <script
+      crossorigin="anonymous"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"
+    ></script>
   </head>
   <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
-    <p>Hey I made this for my friends so they could enjoy some good graphs.</p>
-    <p>
-      If you want to read something informative and spoil the plot (pun) you can
-      read
-      <a href="https://en.wikipedia.org/wiki/Birthday_problem">this</a>.
-    </p>
+    <div class="container">
+      <div class="banner">
+        <p>
+          Hey! I made this for my friends so they could enjoy some cool
+          <em>graphs</em>.
+        </p>
+        <p>
+          If you want to <em>spoil</em> the <em>plot</em> you can read the
+          <a href="https://en.wikipedia.org/wiki/Birthday_problem"
+            >Wikipedia article</a
+          >.
+        </p>
+      </div>
+      <div class="setup">
+        <p>So if there are 23 people in a room...</p>
+        <i class="fas fa-male"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-male"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-male"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-male"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-male"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-male"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-male"></i>
+        <i class="fas fa-male"></i>
+        <i class="fas fa-female"></i>
+        <i class="fas fa-male"></i>
+        <p>
+          Then there's <em class="primary">apparently</em> a 50% chance that at
+          least two people share the same birthday.
+        </p>
+        <p>Seems a little hard to believe? <em class="secondary">Same!</em></p>
+      </div>
+      <section class="box one-off">
+        <p>Try it out!</p>
+        <input type="range" id="people" min="1" max="100" value="1" step="1" />
+        <label for="cowbell">People (<span id="numberOfPeople">1</span>)</label>
+        <button>Run!</button>
+      </section>
+      <section class="box full-spread">
+        <p>Take a look at my pretty graphs</p>
+        <canvas
+          id="graph"
+          width="400"
+          height="400"
+          aria-label="Hello ARIA World"
+          role="img"
+        >
+          Oh shit! Update your computer!
+        </canvas>
+      </section>
+      <section class="explanation">
+        <p>This is the explanation</p>
+      </section>
+    </div>
     <script type="module" src="/scripts/main.js"></script>
   </body>
 </html>

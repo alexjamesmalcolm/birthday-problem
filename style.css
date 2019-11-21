@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Shadows Into Light", cursive;
+}
+
+:root {
+  --primary-color: #b2cefe;
+  --secondary-color: #fea3aa;
+  font-size: 26px;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: 1fr auto 1fr;
+  grid-gap: 1rem;
+}
+
+.banner {
+  grid-column: 1 / 4;
+  font-size: 48px;
+  text-align: center;
+  height: 13rem;
+}
+
+.banner > * {
+  transform-origin: left;
+}
+
+.banner > *:nth-child(2n - 1) {
+  color: var(--primary-color);
+  transform: rotate(5deg);
+  margin-bottom: 1rem;
+}
+
+.banner > *:nth-child(2n - 1) em {
+  color: var(--secondary-color);
+}
+
+.banner > *:nth-child(2n) {
+  color: var(--secondary-color);
+  transform: rotate(7deg);
+}
+
+.banner > *:nth-child(2n) em {
+  color: var(--primary-color);
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+  transform: rotate(30deg);
+}
+
+em.primary {
+  color: var(--primary-color);
+}
+em.secondary {
+  color: var(--secondary-color);
+}
+
+button {
+  color: black;
+}
+
+.box {
+  border: 1px white solid;
+}
+
+.setup {
+  grid-column: 2/3;
+}
+
+.one-off {
+  grid-column: 1/4;
+}
