@@ -69,7 +69,9 @@ button {
 }
 
 .box {
-  border: 1px white solid;
+  border: 1px white dashed;
+  padding: 0.5rem;
+  border-radius: 25px;
 }
 
 .setup {
