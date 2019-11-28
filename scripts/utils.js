@@ -18,19 +18,6 @@ const generatePeople = numberOfPeopleInRoom => {
   return people;
 };
 
-const countUniqueInstances = array => {
-  const count = {};
-  array.forEach(value => {
-    const key = new String(value);
-    if (count[key]) {
-      count[key] += 1;
-    } else {
-      count[key] = 1;
-    }
-  });
-  return count;
-};
-
 const doesSomeoneHaveAMatchingBirthday = people =>
   people.some((a, i) => people.some((b, j) => i !== j && a - b === 0));
 
@@ -51,15 +38,4 @@ const generateRange = (a, b) => {
   return range;
 };
 
-const calcualteOddsOfNoSameBirthday = n =>
-  Math.pow(1 / 365, n) *
-  generateRange(365 - n + 1, 365).reduce((a, b) => a * b, 1);
-
-const calculateOddsOfSameBirthday = n => 1 - calcualteOddsOfNoSameBirthday(n);
-
-export {
-  testARoom,
-  countUniqueInstances,
-  generateRange,
-  calculateOddsOfSameBirthday
-};
+export { testARoom, generateRange };
