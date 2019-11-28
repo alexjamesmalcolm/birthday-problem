@@ -8,7 +8,7 @@ import init, {
 
 init().then(() => {
   const generateChartData = () => {
-    const rangeOfPeople = generate_range(2, 70);
+    const rangeOfPeople = [...generate_range(2, 70)];
     return {
       labels: rangeOfPeople.map(label => `${label} people`),
       datasets: [
