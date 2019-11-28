@@ -4,7 +4,7 @@ import { testARoom } from "./utils.js";
 import init, {
   generate_range,
   calculate_odds_of_same_birthday
-} from "../wasm/pkg/without_a_bundler.js";
+} from "./wasm/pkg/without_a_bundler.js";
 
 init().then(() => {
   const generateChartData = () => {

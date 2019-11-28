@@ -19,3 +19,8 @@ pub fn calculate_odds_of_same_birthday(n: u32) -> f32 {
 //     let people = (1..(number_of_people + 1)).map();
 //     return people.collect();
 // }
+
+#[wasm_bindgen]
+pub fn check_a_room_of_people(people: Vec<u16>) -> bool {
+    return true;
+}
