@@ -1,9 +1,8 @@
-const chartContext = document.querySelector("#graph");
-
 import { testARoom } from "./utils.js";
 import init, {
   generate_range,
-  calculate_odds_of_same_birthday
+  calculate_odds_of_same_birthday,
+  check_a_room_of_people
 } from "./wasm/pkg/without_a_bundler.js";
 
 init().then(() => {
@@ -24,7 +23,8 @@ init().then(() => {
         {
           label: "Simulated",
           data: rangeOfPeople.map(
-            numberOfPeople => testARoom(numberOfPeople, 75) * 100
+            numberOfPeople =>
+              testARoom(numberOfPeople, 75, check_a_room_of_people) * 100
           ),
           backgroundColor: "rgba(254, 163, 170, 0.3)",
           borderColor: "rgba(254, 163, 170, 1)"
@@ -34,6 +34,7 @@ init().then(() => {
     };
   };
 
+  const chartContext = document.querySelector("#graph");
   new Chart(chartContext, {
     type: "line",
     data: generateChartData(),

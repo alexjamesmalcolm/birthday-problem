@@ -14,13 +14,10 @@ pub fn calculate_odds_of_same_birthday(n: u32) -> f32 {
     1.0 - calculate_odds_of_no_same_birthday(n)
 }
 
-// #[wasm_bindgen]
-// pub fn test_a_room(number_of_people: u16, number_of_tries: u16) -> Vec<u16> {
-//     let people = (1..(number_of_people + 1)).map();
-//     return people.collect();
-// }
-
 #[wasm_bindgen]
-pub fn check_a_room_of_people(people: Vec<u16>) -> bool {
-    return true;
+pub fn check_a_room_of_people(mut people: Vec<u16>) -> bool {
+    people.sort();
+    let original_count = people.len();
+    people.dedup();
+    return original_count != people.len();
 }
